@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81800002}
+  - component: {fileID: 81800003}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -150,6 +151,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81800003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81800001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b121747a0608246ac45935fd808b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LP.TurnBasedStrategyGame.GameController
+  player: {fileID: 637980055}
+  enemy: {fileID: 1610934889}
+  playerHealth: {fileID: 954491515}
+  enemyHealth: {fileID: 427455011}
+  attackBtn: {fileID: 1251003411}
+  healBtn: {fileID: 661071974}
 --- !u!1 &118269887
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 661071975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 81800003}
+        m_TargetAssemblyTypeName: LP.TurnBasedStrategyGame.GameController, Assembly-CSharp
+        m_MethodName: BtnHeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &661071975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,7 +1480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1251003412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 81800003}
+        m_TargetAssemblyTypeName: LP.TurnBasedStrategyGame.GameController, Assembly-CSharp
+        m_MethodName: BtnAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1251003412
 MonoBehaviour:
   m_ObjectHideFlags: 0
