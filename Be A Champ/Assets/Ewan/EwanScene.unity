@@ -337,10 +337,10 @@ RectTransform:
   - {fileID: 400089635}
   - {fileID: 743296957}
   - {fileID: 1759226818}
-  - {fileID: 1789968089}
-  - {fileID: 1028654120}
   - {fileID: 889333232}
+  - {fileID: 1789968089}
   - {fileID: 1272847874}
+  - {fileID: 1028654120}
   - {fileID: 1631911910}
   - {fileID: 1052572481}
   - {fileID: 804762279}
@@ -518,6 +518,8 @@ MonoBehaviour:
     Name: Player 2
     baseHP: 150
     curHP: 150
+  currentState: 0
+  ProgressBar: {fileID: 1272847875}
 --- !u!1 &304427853
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +649,8 @@ MonoBehaviour:
     Name: Player 3
     baseHP: 100
     curHP: 100
+  currentState: 0
+  ProgressBar: {fileID: 1631911911}
 --- !u!1 &369127938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1159,7 @@ MonoBehaviour:
     curATK: 30
     baseDEF: 4
     curDEF: 4
+  currentState: 0
 --- !u!1 &479268211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1567,8 @@ MonoBehaviour:
     Name: Player 1
     baseHP: 200
     curHP: 200
+  currentState: 0
+  ProgressBar: {fileID: 889333233}
 --- !u!1 &695722693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1703,7 @@ MonoBehaviour:
     curATK: 40
     baseDEF: 2
     curDEF: 2
+  currentState: 0
 --- !u!1 &714386882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2084,7 @@ GameObject:
   - component: {fileID: 889333234}
   - component: {fileID: 889333233}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Progress Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2230,7 +2238,7 @@ GameObject:
   - component: {fileID: 1028654122}
   - component: {fileID: 1028654121}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Progress Bar border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2759,7 +2767,7 @@ GameObject:
   - component: {fileID: 1272847876}
   - component: {fileID: 1272847875}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Progress Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3617,6 +3625,7 @@ MonoBehaviour:
     curATK: 20
     baseDEF: 3
     curDEF: 3
+  currentState: 0
 --- !u!1 &1631911909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,7 +3638,7 @@ GameObject:
   - component: {fileID: 1631911912}
   - component: {fileID: 1631911911}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Progress Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3978,7 +3987,7 @@ GameObject:
   - component: {fileID: 1759226820}
   - component: {fileID: 1759226819}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Progress Bar border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4053,7 +4062,7 @@ GameObject:
   - component: {fileID: 1789968091}
   - component: {fileID: 1789968090}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Progress Bar border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
