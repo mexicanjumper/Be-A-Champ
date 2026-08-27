@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 276646575}
   m_Layer: 0
   m_Name: Player  2
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 276646570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: 0.5, z: 4.12}
+  m_LocalPosition: {x: -7.309999, y: 0.5, z: 4.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 304427858}
   m_Layer: 0
   m_Name: Player  3
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 304427853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36, y: 0.5, z: 13.1}
+  m_LocalPosition: {x: -8.269999, y: 0.5, z: 13.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 470061868}
   m_Layer: 0
   m_Name: Enemy 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 470061863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7, y: 0.5, z: 4.63}
+  m_LocalPosition: {x: 13.84, y: 0.5, z: 3.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1160,6 +1160,7 @@ MonoBehaviour:
     baseDEF: 4
     curDEF: 4
   currentState: 0
+  HeroToAttack: {fileID: 0}
 --- !u!1 &479268211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1454,7 @@ GameObject:
   - component: {fileID: 637980060}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1545,7 +1546,7 @@ Transform:
   m_GameObject: {fileID: 637980055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 0.5, z: 7.51}
+  m_LocalPosition: {x: -7.9, y: 0.5, z: 8.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1584,7 +1585,7 @@ GameObject:
   - component: {fileID: 695722698}
   m_Layer: 0
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1676,7 +1677,7 @@ Transform:
   m_GameObject: {fileID: 695722693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.7, y: 0.5, z: 12.67}
+  m_LocalPosition: {x: 13.49, y: 0.5, z: 13.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1704,6 +1705,7 @@ MonoBehaviour:
     baseDEF: 2
     curDEF: 2
   currentState: 0
+  HeroToAttack: {fileID: 0}
 --- !u!1 &714386882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +1983,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743296956}
   m_CullTransparentMesh: 1
+--- !u!1 &749319395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749319397}
+  - component: {fileID: 749319398}
+  m_Layer: 0
+  m_Name: BattleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749319397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749319395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 593.4842, y: 268.9145, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749319398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749319395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1777a25ff1794348bfa11d757a94834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattelStateMacshine
+  battleStates: 0
+  PerformList: []
+  HerosInBattle: []
+  EnemysInBattle: []
 --- !u!1 &804762278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,7 +3556,7 @@ GameObject:
   - component: {fileID: 1610934894}
   m_Layer: 0
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3598,7 +3648,7 @@ Transform:
   m_GameObject: {fileID: 1610934889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.01, y: 0.5, z: 7.55}
+  m_LocalPosition: {x: 13.65, y: 0.5, z: 9.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3626,6 +3676,7 @@ MonoBehaviour:
     baseDEF: 3
     curDEF: 3
   currentState: 0
+  HeroToAttack: {fileID: 0}
 --- !u!1 &1631911909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,3 +4690,4 @@ SceneRoots:
   - {fileID: 1816442102}
   - {fileID: 936051597}
   - {fileID: 81800002}
+  - {fileID: 749319397}
