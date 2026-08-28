@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Players
+  - Battle Mnager
+  - Battle Manager
+  - Target
   layers:
   - Default
   - TransparentFX
