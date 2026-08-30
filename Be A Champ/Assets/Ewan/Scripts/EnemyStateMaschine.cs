@@ -22,13 +22,13 @@ public class EnemyStateMaschine : MonoBehaviour
     public TurnState currentState;
 
     private float cur_cooldown = 0f;
-    private float max_cooldown = 5f;
+    private float max_cooldown = 7f;
 
     private Vector3 startposition;
 
     private bool actionStarted = false;
     public GameObject HeroToAttack;
-    private float animSpeed = 5f;
+    private float animSpeed = 15f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -478,6 +478,7 @@ MonoBehaviour:
   currentState: 0
   ProgressBar: {fileID: 1272847875}
   Selector: {fileID: 2029017232}
+  EnemyToAttack: {fileID: 0}
 --- !u!1 &304427853
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +612,7 @@ MonoBehaviour:
   currentState: 0
   ProgressBar: {fileID: 1631911911}
   Selector: {fileID: 2035846655}
+  EnemyToAttack: {fileID: 0}
 --- !u!1 &325799956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1570,7 @@ MonoBehaviour:
   currentState: 0
   ProgressBar: {fileID: 889333233}
   Selector: {fileID: 330845456}
+  EnemyToAttack: {fileID: 0}
 --- !u!1 &695722693
 GameObject:
   m_ObjectHideFlags: 0
