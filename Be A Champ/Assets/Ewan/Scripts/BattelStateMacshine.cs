@@ -26,9 +26,9 @@ public class BattelStateMacshine : MonoBehaviour
     {
         ACTIVATE,
         WAITING,
-        INPUT1,
+        INPUTAction1,
         INPUT2,
-        //INPUT3,
+        INPUTAction2,
         DONE
     }
 
@@ -139,7 +139,7 @@ public class BattelStateMacshine : MonoBehaviour
         }
     }
 
-    public void Input1()// attack button 1
+    public void InputAction1()// attack button 1
     {
         HeroChoise.Attacker = HerosToManage[0].name;
         HeroChoise.AttacksGameObject = HerosToManage[0];
@@ -147,6 +147,16 @@ public class BattelStateMacshine : MonoBehaviour
 
         AttackPanel.SetActive (false);
         EnemySelectPanel.SetActive (true);
+    }
+
+    public void InputAction2()// attack button 2
+    {
+        HeroChoise.Attacker = HerosToManage[0].name;
+        HeroChoise.AttacksGameObject = HerosToManage[0];
+        HeroChoise.Type = "Players";
+
+        AttackPanel.SetActive(false);
+        EnemySelectPanel.SetActive(true);
     }
 
     public void Input2(GameObject choosenEnemy)//enemy select
