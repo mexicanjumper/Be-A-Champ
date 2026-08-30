@@ -7,6 +7,6 @@ public class EnemyScriptButton : MonoBehaviour
 
     public void SelectEnemy()
     {
-        GameObject.Find("BattleManager").GetComponent<BattelStateMacshine>();//save input enemy prefsab
+        GameObject.Find("BattleManager").GetComponent<BattelStateMacshine>().Input2(EnemyPrefab);//save input enemy prefsab
     }
 }

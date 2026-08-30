@@ -28,6 +28,7 @@ public class BattelStateMacshine : MonoBehaviour
         WAITING,
         INPUT1,
         INPUT2,
+        //INPUT3,
         DONE
     }
 
@@ -38,12 +39,18 @@ public class BattelStateMacshine : MonoBehaviour
     public GameObject enemyButton;
     public Transform Spacer;
 
+    public GameObject AttackPanel;
+    public GameObject EnemySelectPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         battleStates = PerformAction.WAIT;
         EnemysInBattle.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         HerosInBattle.AddRange(GameObject.FindGameObjectsWithTag("Players"));
+        HeroInput = HeroGUI.ACTIVATE;
+
+        AttackPanel.SetActive(false);
+        EnemySelectPanel.SetActive(false);
 
         EnemyButtons();
 
@@ -72,13 +79,35 @@ public class BattelStateMacshine : MonoBehaviour
                 }
                 if (PerformList[0].Type == "Players")
                 {
-
+                    Debug.Log("Player is here to perform");
                 }
                 battleStates = PerformAction.PERFORMACTION;
 
                 break;
 
             case (PerformAction.PERFORMACTION):
+                break;
+        }
+
+        switch (HeroInput)
+        {
+            case (HeroGUI.ACTIVATE):
+                if (HerosToManage.Count > 0)
+                {
+                    HerosToManage[0].transform.Find("Selector").gameObject.SetActive(true);
+                    HeroChoise = new HandeleTurn();
+
+                    AttackPanel.SetActive(true);
+                    HeroInput =HeroGUI.WAITING;
+                }
+                break;
+
+            case (HeroGUI.WAITING):
+
+                break;
+
+            case (HeroGUI.DONE):
+                heroInputDone();
                 break;
         }
     }
@@ -97,6 +126,7 @@ public class BattelStateMacshine : MonoBehaviour
 
             EnemyStateMaschine cur_enemy = enemy.GetComponent<EnemyStateMaschine>();
 
+            
             TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = cur_enemy.enemy.name;
 
@@ -104,5 +134,30 @@ public class BattelStateMacshine : MonoBehaviour
 
             newButton.transform.SetParent (Spacer,false);
         }
+    }
+
+    public void Input1()// attack button 1
+    {
+        HeroChoise.Attacker = HerosToManage[0].name;
+        HeroChoise.AttacksGameObject = HerosToManage[0];
+        HeroChoise.Type = "Players";
+
+        AttackPanel.SetActive (false);
+        EnemySelectPanel.SetActive (true);
+    }
+
+    public void Input2(GameObject choosenEnemy)//enemy select
+    {
+        HeroChoise.AttackerTarget = choosenEnemy;
+        HeroInput = HeroGUI.DONE;
+    }
+
+    void heroInputDone()
+    {
+        PerformList.Add(HeroChoise);
+        EnemySelectPanel.SetActive(false);
+        HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
+        HerosToManage.RemoveAt(0);
+        HeroInput = HeroGUI.ACTIVATE;
     }
 }
