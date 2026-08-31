@@ -1,19 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class BaseEnemy 
+public class BaseClass 
 {
-    public string name;
-
-    public enum Type
-    {
-        Bleed,
-        Fire,
-        Toxic,
-    }
-     
-    public Type Enemytype;
+    public string theName;
 
     public float baseHP;
     public float curHP;
@@ -22,5 +12,4 @@ public class BaseEnemy
     public float curATK;
     public float baseDEF;
     public float curDEF;
-    
 }

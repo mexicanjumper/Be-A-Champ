@@ -131,7 +131,7 @@ public class BattelStateMacshine : MonoBehaviour
 
             
             TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = cur_enemy.enemy.name;
+            buttonText.text = cur_enemy.enemy.theName;
 
             button.EnemyPrefab = enemy;
 
