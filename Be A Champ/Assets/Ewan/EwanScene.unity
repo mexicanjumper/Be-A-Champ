@@ -1691,6 +1691,18 @@ PrefabInstance:
       propertyPath: Selector
       value: 
       objectReference: {fileID: 1903460697}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3981026408391072476, guid: aeb1edaee550f004786660d9c9cd630d, type: 3}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7645609634760082270, guid: 9e500d307f602e24588e478c2c0ba42a, type: 3}
     - target: {fileID: 8874662523641915776, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.5
@@ -3435,6 +3447,34 @@ PrefabInstance:
       propertyPath: ProgressBar
       value: 
       objectReference: {fileID: 889333233}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.baseHP
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.curATK
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.curDEF
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.baseATK
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.baseDEF
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: 'hero.attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5926994190830093985, guid: 5571cc8469928cf4e90e56e85ce8b4b3, type: 3}
     - target: {fileID: 2926628673906042619, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.9
@@ -3496,6 +3536,18 @@ PrefabInstance:
       propertyPath: Selector
       value: 
       objectReference: {fileID: 1781972385}
+    - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7645609634760082270, guid: 9e500d307f602e24588e478c2c0ba42a, type: 3}
+    - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3981026408391072476, guid: aeb1edaee550f004786660d9c9cd630d, type: 3}
     - target: {fileID: 419705029862005694, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
       propertyPath: m_Name
       value: The Boss
@@ -3564,6 +3616,22 @@ PrefabInstance:
       propertyPath: ProgressBar
       value: 
       objectReference: {fileID: 1631911911}
+    - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
+      propertyPath: hero.curATK
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
+      propertyPath: hero.curDEF
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
+      propertyPath: hero.baseATK
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
+      propertyPath: hero.baseDEF
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7491264992200401290, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.269999
@@ -3621,6 +3689,18 @@ PrefabInstance:
       propertyPath: Selector
       value: 
       objectReference: {fileID: 1023701528}
+    - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7645609634760082270, guid: 9e500d307f602e24588e478c2c0ba42a, type: 3}
+    - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
+      propertyPath: 'enemy.attacks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3981026408391072476, guid: aeb1edaee550f004786660d9c9cd630d, type: 3}
     - target: {fileID: 3624259600676936954, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
       propertyPath: m_Name
       value: Illuminate
@@ -3729,6 +3809,14 @@ PrefabInstance:
       propertyPath: ProgressBar
       value: 
       objectReference: {fileID: 1272847875}
+    - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
+      propertyPath: hero.curATK
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
+      propertyPath: hero.baseATK
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

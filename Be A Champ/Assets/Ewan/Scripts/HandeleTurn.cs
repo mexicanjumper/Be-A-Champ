@@ -10,5 +10,5 @@ public class HandeleTurn
     public GameObject AttackerTarget;// who is going to be attackted
 
     // which attack is performed
-
+    public BaseAttacks choosenAttack;
 }
