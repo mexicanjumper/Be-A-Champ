@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using TMPro;
 
 public class HeroStateMaschine : MonoBehaviour
 {
@@ -33,21 +32,10 @@ public class HeroStateMaschine : MonoBehaviour
     private Vector3 startposition;
     private float animSpeed = 15f;
     private bool alive = true;
-    //hero Panel
-    private HeroPanelStats Stats;
-    public GameObject HeroPanel;
-    private Transform HeroPanelSpacer;
 
 
     void Start()
     {
-        //find spacer
-        HeroPanelSpacer = GameObject.Find("BattleCanves").transform.Find("HeroPanel").transform.Find("HeroPanelSpacer");
-
-        //create panel, fill in info
-        CreateHeroPanel();
-        
-
         startposition = transform.position;
         cur_cooldown = Random.Range(0, 2.5f);
         Selector.SetActive(false);
@@ -58,7 +46,6 @@ public class HeroStateMaschine : MonoBehaviour
    
     void Update()
     {
-        UpdateHeroPanel();
         //Debug.Log(currentState);
         switch (currentState)
         {
@@ -189,25 +176,7 @@ public class HeroStateMaschine : MonoBehaviour
        hero.curHP -= getDamageAmount;
         if(hero.curHP <= 0)
         {
-            hero.curHP = 0;
-            currentState = TurnState.DEAD;    
+          currentState = TurnState.DEAD;    
         }
-    }
-
-    void CreateHeroPanel()
-    {
-        HeroPanel = Instantiate(HeroPanel) as GameObject;
-        Stats = HeroPanel.GetComponent<HeroPanelStats>();
-        Stats.heroName.text = hero.theName;
-        Stats.heroHP.text = "HP: " + hero.curHP;
-        Stats.heroMP.text = "MP: " + hero.curMP;
-
-        HeroPanel.transform.SetParent(HeroPanelSpacer, false);
-    }
-
-    void UpdateHeroPanel()
-    {
-        Stats.heroHP.text = "HP: " + hero.curHP;
-        Stats.heroMP.text = "MP: " + hero.curMP;
     }
 }
