@@ -42,12 +42,6 @@ public class BattelStateMacshine : MonoBehaviour
 
     public GameObject AttackPanel;
     public GameObject EnemySelectPanel;
-    public GameObject MagicPanal;
-
-    public Transform actionSpacer;
-    public Transform magicSpacer;
-    public GameObject actionButton;
-    private List<GameObject> atkBtns = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,7 +52,6 @@ public class BattelStateMacshine : MonoBehaviour
 
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(false);
-        MagicPanal.SetActive(false);
 
         EnemyButtons();
 
@@ -124,9 +117,6 @@ public class BattelStateMacshine : MonoBehaviour
                     HeroChoise = new HandeleTurn();
 
                     AttackPanel.SetActive(true);
-
-                    CreateAttackButtons();
-
                     HeroInput =HeroGUI.WAITING;
                 }
                 break;
@@ -175,7 +165,7 @@ public class BattelStateMacshine : MonoBehaviour
         EnemySelectPanel.SetActive (true);
     }
 
-   /* public void InputAction2()// attack button 2
+    public void InputAction2()// attack button 2
     {
         HeroChoise.Attacker = HerosToManage[0].name;
         HeroChoise.AttacksGameObject = HerosToManage[0];
@@ -183,7 +173,7 @@ public class BattelStateMacshine : MonoBehaviour
 
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(true);
-    }*/
+    }
 
     public void Input2(GameObject choosenEnemy)//enemy select
     {
@@ -198,16 +188,5 @@ public class BattelStateMacshine : MonoBehaviour
         HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
         HerosToManage.RemoveAt(0);
         HeroInput = HeroGUI.ACTIVATE;
-    }
-
-    void CreateAttackButtons()
-    {
-        GameObject AttackButton = Instantiate(actionButton) as GameObject;
-        Text AttackButtonText = AttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<Text>();
-        AttackButtonText.text = "Attack";
-        AttackButton.GetComponent<Button>().onClick.AddListener(() => InputAction1());
-        AttackButton.transform.SetParent(actionSpacer, false);
-        atkBtns.Add(AttackButton);
-
     }
 }
