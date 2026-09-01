@@ -512,6 +512,10 @@ MonoBehaviour:
   Spacer: {fileID: 1426203925}
   AttackPanel: {fileID: 1052572480}
   EnemySelectPanel: {fileID: 804762278}
+  MagicPanal: {fileID: 0}
+  actionSpacer: {fileID: 0}
+  magicSpacer: {fileID: 0}
+  actionButton: {fileID: 4195933700177540074, guid: cd2faa4e2a5041842b1d7cd27487d08c, type: 3}
 --- !u!1 &804762278
 GameObject:
   m_ObjectHideFlags: 0
