@@ -9,6 +9,8 @@ TagManager:
   - Battle Mnager
   - Battle Manager
   - Target
+  - DeadHero
+  - DeadEnemy
   layers:
   - Default
   - TransparentFX

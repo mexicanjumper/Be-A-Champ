@@ -7,7 +7,7 @@ public class AtteckOne : BaseAttacks
     {
         attackName = "Bite";
         attackDescription = "A powerful bite that deals moderate damage.";
-        attackDamage = 10f;
+        attackDamage = 100f;
         attackCost = 0f;
     }
 }

@@ -7,7 +7,7 @@ public class AttackTwo : BaseAttacks
     {
         attackName = "Slash";
         attackDescription ="A quick slash attack dealing moderate damage.";
-        attackDamage = 15f;
+        attackDamage = 100f;
         attackCost = 0f;
     }
 }
