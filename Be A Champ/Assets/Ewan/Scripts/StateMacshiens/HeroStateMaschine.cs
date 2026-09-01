@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class HeroStateMaschine : MonoBehaviour
 {
@@ -34,10 +35,21 @@ public class HeroStateMaschine : MonoBehaviour
 
     private bool alive = true;
 
+    private HeroPanelStats stats;
+    public GameObject HeroPanel;
+    private Transform HeroPanelScpacer;
+
+
 
 
     void Start()
     {
+        
+        HeroPanelScpacer = GameObject.Find("BattleCanvas").transform.Find("HerosPanel").transform.Find("HeroPanelSpacer");
+
+        CreateHeroPanel();
+
+
         startposition = transform.position;
         cur_cooldown = Random.Range(0, 2.5f);
         Selector.SetActive(false);
@@ -178,7 +190,30 @@ public class HeroStateMaschine : MonoBehaviour
        hero.curHP -= getDamageAmount;
         if(hero.curHP <= 0)
         {
-          currentState = TurnState.DEAD;    
+            hero.curHP = 0;
+            currentState = TurnState.DEAD;
+
+           
         }
+
+        UpdateHeroPanel();
+    }
+
+    void CreateHeroPanel()
+    {
+        HeroPanel = Instantiate(HeroPanel) as GameObject;
+        stats = HeroPanel.GetComponent<HeroPanelStats>();
+        stats.HeroName.text = hero.theName;
+        stats.HeroHP.text = "HP: " + hero.curHP;
+        stats.HeroMP.text = "MP: " + hero.curMP;
+
+        HeroPanel.transform.SetParent(HeroPanelScpacer, false);
+
+    }
+
+    void UpdateHeroPanel()
+    {
+        stats.HeroHP.text = "HP: " + hero.curHP;
+        stats.HeroMP.text = "MP: " + hero.curMP;
     }
 }
