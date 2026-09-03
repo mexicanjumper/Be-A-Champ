@@ -4,11 +4,10 @@ public class NPCInnteractable : MonoBehaviour, IInteractble
 {
     [SerializeField] private string interactText;
 
-    [SerializeField] private DialogueTrigger dialogueTrigger;
-
     public void Interact(Transform interactorTransform)
     {
-        Debug.Log("Interact!");
+        DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        dialogueTrigger.TriggerDialogue();
     }
 
     public string GetInteractText()
