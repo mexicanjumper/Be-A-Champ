@@ -175,7 +175,7 @@ public class BattelStateMacshine : MonoBehaviour
         EnemySelectPanel.SetActive (true);
     }
 
-   /* public void InputAction2()// attack button 2
+    public void InputAction2()// attack button 2
     {
         HeroChoise.Attacker = HerosToManage[0].name;
         HeroChoise.AttacksGameObject = HerosToManage[0];
@@ -183,7 +183,7 @@ public class BattelStateMacshine : MonoBehaviour
 
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(true);
-    }*/
+    }
 
     public void Input2(GameObject choosenEnemy)//enemy select
     {
@@ -195,6 +195,13 @@ public class BattelStateMacshine : MonoBehaviour
     {
         PerformList.Add(HeroChoise);
         EnemySelectPanel.SetActive(false);
+
+        foreach (GameObject atkBtn in atkBtns)
+        {
+            Destroy(atkBtn);
+        }
+        atkBtns.Clear();
+
         HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
         HerosToManage.RemoveAt(0);
         HeroInput = HeroGUI.ACTIVATE;
@@ -203,11 +210,18 @@ public class BattelStateMacshine : MonoBehaviour
     void CreateAttackButtons()
     {
         GameObject AttackButton = Instantiate(actionButton) as GameObject;
-        Text AttackButtonText = AttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<Text>();
+        TextMeshProUGUI AttackButtonText = AttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
         AttackButtonText.text = "Attack";
         AttackButton.GetComponent<Button>().onClick.AddListener(() => InputAction1());
         AttackButton.transform.SetParent(actionSpacer, false);
         atkBtns.Add(AttackButton);
+
+        GameObject MagicButton = Instantiate(actionButton) as GameObject;
+        TextMeshProUGUI MagicButtonText = MagicButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
+        MagicButtonText.text = "Magic";
+        MagicButton.GetComponent<Button>().onClick.AddListener(() => InputAction2());
+        MagicButton.transform.SetParent(actionSpacer, false);
+        atkBtns.Add(MagicButton);
 
     }
 }
