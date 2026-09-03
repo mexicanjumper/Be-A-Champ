@@ -16,6 +16,11 @@ public class PlayerInteract : MonoBehaviour
                 interactable.Interact(transform);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DialogueManager dialogueManager = FindAnyObjectByType<DialogueManager>();
+            dialogueManager.DisplayNextSentence();
+        }
     }
 
     public IInteractble GetInteractableObject()
