@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 
 public class BattelStateMacshine : MonoBehaviour
-{   
+{
     public enum PerformAction
     {
         WAIT,
@@ -19,7 +19,7 @@ public class BattelStateMacshine : MonoBehaviour
     public PerformAction battleStates;
 
     public List<HandeleTurn> PerformList = new List<HandeleTurn>();
-   
+
     public List<GameObject> HerosInBattle = new List<GameObject>();
     public List<GameObject> EnemysInBattle = new List<GameObject>();
 
@@ -30,6 +30,7 @@ public class BattelStateMacshine : MonoBehaviour
         INPUTAction1,
         INPUT2,
         INPUTAction2,
+        Input3,
         DONE
     }
 
@@ -47,6 +48,7 @@ public class BattelStateMacshine : MonoBehaviour
     public Transform actionSpacer;
     public Transform magicSpacer;
     public GameObject actionButton;
+    public GameObject magicButton;
     private List<GameObject> atkBtns = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -97,8 +99,8 @@ public class BattelStateMacshine : MonoBehaviour
                             ESM.currentState = EnemyStateMaschine.TurnState.ACTION;
                         }
                     }
-                    
-                    
+
+
                 }
                 if (PerformList[0].Type == "Players")
                 {
@@ -127,7 +129,7 @@ public class BattelStateMacshine : MonoBehaviour
 
                     CreateAttackButtons();
 
-                    HeroInput =HeroGUI.WAITING;
+                    HeroInput = HeroGUI.WAITING;
                 }
                 break;
 
@@ -141,27 +143,27 @@ public class BattelStateMacshine : MonoBehaviour
         }
     }
 
-    public void CollectActions( HandeleTurn input)
+    public void CollectActions(HandeleTurn input)
     {
         PerformList.Add(input);
     }
 
     void EnemyButtons()
     {
-        foreach(GameObject enemy in EnemysInBattle)
+        foreach (GameObject enemy in EnemysInBattle)
         {
-            GameObject newButton = Instantiate (enemyButton) as GameObject;
+            GameObject newButton = Instantiate(enemyButton) as GameObject;
             EnemyScriptButton button = newButton.GetComponent<EnemyScriptButton>();
 
             EnemyStateMaschine cur_enemy = enemy.GetComponent<EnemyStateMaschine>();
 
-            
+
             TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = cur_enemy.enemy.theName;
 
             button.EnemyPrefab = enemy;
 
-            newButton.transform.SetParent (Spacer,false);
+            newButton.transform.SetParent(Spacer, false);
         }
     }
 
@@ -171,11 +173,11 @@ public class BattelStateMacshine : MonoBehaviour
         HeroChoise.AttacksGameObject = HerosToManage[0];
         HeroChoise.Type = "Players";
 
-        AttackPanel.SetActive (false);
-        EnemySelectPanel.SetActive (true);
+        AttackPanel.SetActive(false);
+        EnemySelectPanel.SetActive(true);
     }
 
-    public void InputAction2()// attack button 2
+   /* public void InputAction2()// attack button 2
     {
         HeroChoise.Attacker = HerosToManage[0].name;
         HeroChoise.AttacksGameObject = HerosToManage[0];
@@ -183,7 +185,7 @@ public class BattelStateMacshine : MonoBehaviour
 
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(true);
-    }
+    }*/
 
     public void Input2(GameObject choosenEnemy)//enemy select
     {
@@ -216,12 +218,51 @@ public class BattelStateMacshine : MonoBehaviour
         AttackButton.transform.SetParent(actionSpacer, false);
         atkBtns.Add(AttackButton);
 
-        GameObject MagicButton = Instantiate(actionButton) as GameObject;
-        TextMeshProUGUI MagicButtonText = MagicButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
+        GameObject MagicAttackButton = Instantiate(actionButton) as GameObject;
+        TextMeshProUGUI MagicButtonText = MagicAttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
         MagicButtonText.text = "Magic";
-        MagicButton.GetComponent<Button>().onClick.AddListener(() => InputAction2());
-        MagicButton.transform.SetParent(actionSpacer, false);
-        atkBtns.Add(MagicButton);
+        MagicAttackButton.GetComponent<Button>().onClick.AddListener(() => Input3());
+        MagicAttackButton.transform.SetParent(actionSpacer, false);
+        atkBtns.Add(MagicAttackButton);
 
+        if (HerosToManage[0].GetComponent<HeroStateMaschine>().hero.MagicAttack.Count > 0)
+        {
+            foreach (BaseAttacks magicATK in HerosToManage[0].GetComponent<HeroStateMaschine>().hero.MagicAttack)
+            {
+                GameObject MagicButton = Instantiate(magicButton) as GameObject;
+                TextMeshProUGUI magicAttackButtonText = MagicButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
+                magicAttackButtonText.text = magicATK.attackName;
+                AttackButton ATB = MagicButton.GetComponent<AttackButton>();
+                ATB.magicAttackToPerform = magicATK;
+                MagicButton.transform.SetParent(magicSpacer, false);
+                atkBtns.Add(MagicButton);
+
+            }
+
+        }
+
+        else
+        {
+
+            MagicAttackButton.GetComponent<Button>().interactable = false;
+
+        }
+    }
+
+    public void Input4 (BaseAttacks choosenMagic)//magic select
+    {
+        HeroChoise.Attacker = HerosToManage[0].name;
+        HeroChoise.AttacksGameObject = HerosToManage[0];
+        HeroChoise.Type = "Players";
+
+        HeroChoise.choosenAttack = choosenMagic;
+        MagicPanal.SetActive(false);
+        EnemySelectPanel.SetActive(true);
+    }
+
+    public void Input3()
+    {
+        AttackPanel.SetActive(false);
+        MagicPanal.SetActive(true);
     }
 }
