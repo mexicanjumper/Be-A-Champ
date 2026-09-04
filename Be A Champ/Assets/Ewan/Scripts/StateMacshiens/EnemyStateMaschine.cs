@@ -31,6 +31,9 @@ public class EnemyStateMaschine : MonoBehaviour
     public GameObject HeroToAttack;
     private float animSpeed = 15f;
 
+    //alive
+    private bool alive = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,8 +66,38 @@ public class EnemyStateMaschine : MonoBehaviour
                 
                 break;
             case (TurnState.DEAD):
+                if (!alive)
+                {
+                    return;
+                }
+                else
+                {
+                    this.gameObject.tag = "DeadEnemy";
 
-                break;
+                    BSM.EnemysInBattle.Remove(this.gameObject);
+
+                    Selector.SetActive(false);
+                    
+                    for(int i = 0; i < BSM.PerformList.Count; i++)
+                    {
+                        if (BSM.PerformList[i].AttacksGameObject == this.gameObject)
+                        {
+                            BSM.PerformList.Remove(BSM.PerformList[i]);
+                        }
+                    }
+
+                    // change colour or dead animation
+                    this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105, 105, 105, 255);
+
+                    alive = false;
+
+                    BSM.EnemyButtons();
+
+                    BSM.battleStates = BattelStateMacshine.PerformAction.CHEACKALIVE;
+
+
+                }
+                    break;
 
         }
     }
@@ -153,5 +186,17 @@ public class EnemyStateMaschine : MonoBehaviour
     {
         float calc_damage = enemy.curATK + BSM.PerformList[0].choosenAttack.attackDamage;
         HeroToAttack.GetComponent<HeroStateMaschine>().TakeDamage (calc_damage);
+    }
+
+    public void TakeDamage(float getDamageAmount)
+    {
+        enemy.curHP -= getDamageAmount;
+        if (enemy.curHP <= 0)
+        {
+            enemy.curHP = 0;
+            currentState = TurnState.DEAD;
+            //change tag to dead
+          
+        }
     }
 }

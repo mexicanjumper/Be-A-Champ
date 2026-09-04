@@ -109,7 +109,7 @@ public class HeroStateMaschine : MonoBehaviour
                     }
                     this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105, 105, 105, 255);
 
-                    BSM.HeroInput = BattelStateMacshine.HeroGUI.ACTIVATE;
+                    BSM.battleStates = BattelStateMacshine.PerformAction.CHEACKALIVE;
 
                     alive = false;
                 }
@@ -154,7 +154,7 @@ public class HeroStateMaschine : MonoBehaviour
         // wait abit
         yield return new WaitForSeconds(0.5f);
         //do damage
-
+        DoDamage();
         //animate back to startposition
         Vector3 firstPosition = startposition;
         while (MoveTowardsStart(firstPosition))
@@ -198,6 +198,12 @@ public class HeroStateMaschine : MonoBehaviour
 
         UpdateHeroPanel();
     }
+    //do damage
+    void DoDamage()
+    {
+        float calc_damage = hero.curATK + BSM.PerformList[0].choosenAttack.attackDamage;
+        EnemyToAttack.GetComponent<EnemyStateMaschine>().TakeDamage(calc_damage);
+    }   
 
     void CreateHeroPanel()
     {

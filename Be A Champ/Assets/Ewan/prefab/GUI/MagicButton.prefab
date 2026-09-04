@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 888536725094858561}
   - component: {fileID: 6613674875935217444}
   - component: {fileID: 7047445585000375780}
+  - component: {fileID: 4272297754490581867}
   m_Layer: 5
   m_Name: MagicButton
   m_TagString: Untagged
@@ -259,7 +260,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4832563132159462013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4272297754490581867}
+        m_TargetAssemblyTypeName: AttackButton, Assembly-CSharp
+        m_MethodName: CastMagicAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6613674875935217444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,3 +319,16 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4272297754490581867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201936732531725105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7010f12aa6ba74a8f1b81840873c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackButton
+  magicAttackToPerform: {fileID: 0}

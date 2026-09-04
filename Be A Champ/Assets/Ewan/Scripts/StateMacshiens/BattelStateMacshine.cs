@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,9 @@ public class BattelStateMacshine : MonoBehaviour
         WAIT,
         TAKEACTION,
         PERFORMACTION,
+        CHEACKALIVE,
+        WIN,
+        LOSE,
     }
 
 
@@ -50,6 +54,10 @@ public class BattelStateMacshine : MonoBehaviour
     public GameObject actionButton;
     public GameObject magicButton;
     private List<GameObject> atkBtns = new List<GameObject>();
+
+    //enemy buttons
+    private List<GameObject> enemyBtns = new List<GameObject>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -114,6 +122,35 @@ public class BattelStateMacshine : MonoBehaviour
 
             case (PerformAction.PERFORMACTION):
 
+
+                break;
+
+            case (PerformAction.CHEACKALIVE):
+                if(HerosInBattle.Count < 1)
+                {
+                    battleStates = PerformAction.LOSE;
+                }
+                else if(EnemysInBattle.Count < 1)
+                {
+                    battleStates = PerformAction.WIN;
+                }
+                else
+                {
+                    ClearAttackPanel();
+                    HeroInput = HeroGUI.ACTIVATE;
+                }
+                break;
+
+            case (PerformAction.LOSE):
+                {
+
+                }
+                break;
+
+            case (PerformAction.WIN):
+                {
+
+                }
                 break;
         }
 
@@ -148,8 +185,17 @@ public class BattelStateMacshine : MonoBehaviour
         PerformList.Add(input);
     }
 
-    void EnemyButtons()
+    public void EnemyButtons()
     {
+        //cleanup
+        foreach(GameObject enemyBtn in enemyBtns)
+        {
+            Destroy(enemyBtn);
+        }
+
+        enemyBtns.Clear();
+        //create buttons
+
         foreach (GameObject enemy in EnemysInBattle)
         {
             GameObject newButton = Instantiate(enemyButton) as GameObject;
@@ -164,6 +210,7 @@ public class BattelStateMacshine : MonoBehaviour
             button.EnemyPrefab = enemy;
 
             newButton.transform.SetParent(Spacer, false);
+            enemyBtns.Add(newButton);
         }
     }
 
@@ -172,7 +219,7 @@ public class BattelStateMacshine : MonoBehaviour
         HeroChoise.Attacker = HerosToManage[0].name;
         HeroChoise.AttacksGameObject = HerosToManage[0];
         HeroChoise.Type = "Players";
-
+        HeroChoise.choosenAttack = HerosToManage[0].GetComponent<HeroStateMaschine>().hero.attacks[0];
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(true);
     }
@@ -196,17 +243,26 @@ public class BattelStateMacshine : MonoBehaviour
     void heroInputDone()
     {
         PerformList.Add(HeroChoise);
+        ClearAttackPanel();
+        
+
+
+        HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
+        HerosToManage.RemoveAt(0);
+        HeroInput = HeroGUI.ACTIVATE;
+    }
+
+    void ClearAttackPanel()
+    {
         EnemySelectPanel.SetActive(false);
+        AttackPanel.SetActive(false);
+        MagicPanal.SetActive(false);
 
         foreach (GameObject atkBtn in atkBtns)
         {
             Destroy(atkBtn);
         }
         atkBtns.Clear();
-
-        HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
-        HerosToManage.RemoveAt(0);
-        HeroInput = HeroGUI.ACTIVATE;
     }
 
     void CreateAttackButtons()
@@ -217,10 +273,11 @@ public class BattelStateMacshine : MonoBehaviour
         AttackButton.GetComponent<Button>().onClick.AddListener(() => InputAction1());
         AttackButton.transform.SetParent(actionSpacer, false);
         atkBtns.Add(AttackButton);
-
+        //Magic Attack Button
         GameObject MagicAttackButton = Instantiate(actionButton) as GameObject;
-        TextMeshProUGUI MagicButtonText = MagicAttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
-        MagicButtonText.text = "Magic";
+        TextMeshProUGUI MagicAttackButtonText = MagicAttackButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
+        MagicAttackButtonText.text = "Magic";
+
         MagicAttackButton.GetComponent<Button>().onClick.AddListener(() => Input3());
         MagicAttackButton.transform.SetParent(actionSpacer, false);
         atkBtns.Add(MagicAttackButton);
@@ -230,8 +287,8 @@ public class BattelStateMacshine : MonoBehaviour
             foreach (BaseAttacks magicATK in HerosToManage[0].GetComponent<HeroStateMaschine>().hero.MagicAttack)
             {
                 GameObject MagicButton = Instantiate(magicButton) as GameObject;
-                TextMeshProUGUI magicAttackButtonText = MagicButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
-                magicAttackButtonText.text = magicATK.attackName;
+                TextMeshProUGUI MagicButtonText = MagicButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>();
+                MagicButtonText.text = magicATK.attackName;
                 AttackButton ATB = MagicButton.GetComponent<AttackButton>();
                 ATB.magicAttackToPerform = magicATK;
                 MagicButton.transform.SetParent(magicSpacer, false);
