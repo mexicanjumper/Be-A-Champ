@@ -7,8 +7,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class BattelStateMacshine : MonoBehaviour
 {
+
+    public GameObject Test;
+    public GameObject Test2;
+
+
+
     public enum PerformAction
     {
         WAIT,
@@ -71,6 +78,8 @@ public class BattelStateMacshine : MonoBehaviour
         MagicPanal.SetActive(false);
 
         EnemyButtons();
+
+       
 
 
     }
@@ -143,17 +152,22 @@ public class BattelStateMacshine : MonoBehaviour
 
             case (PerformAction.LOSE):
                 {
-                    Debug.Log("You Loose");
+                    Debug.Log("You lost the battle");
+                    Test.SetActive(true);
                 }
                 break;
 
             case (PerformAction.WIN):
                 {
-                    Debug.Log("You Win");
-                    for(int i = 0; i < HerosInBattle.Count; i++)
+
+                    Debug.Log("You won the battle");
+                    Test2.SetActive(true);
+                    for (int i = 0; i < HerosInBattle.Count; i++)
                     {
                         HerosInBattle[i].GetComponent<HeroStateMaschine>().currentState = HeroStateMaschine.TurnState.WAITING;
                     }
+
+                    
                 }
                 break;
         }
