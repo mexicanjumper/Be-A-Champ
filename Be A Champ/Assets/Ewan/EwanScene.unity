@@ -1708,6 +1708,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1903460697}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.curHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.baseHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: enemy.attacks.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3173,6 +3181,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
     - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
+      propertyPath: hero.curHP
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: hero.curMP
       value: 50
       objectReference: {fileID: 0}
@@ -3282,6 +3294,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1781972385}
     - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
+      propertyPath: enemy.curHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
+      propertyPath: enemy.baseHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679264720814321, guid: 53896cdefca55e94a99c8a536f6326e4, type: 3}
       propertyPath: enemy.attacks.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3361,6 +3381,10 @@ PrefabInstance:
       propertyPath: HeroPanel
       value: 
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
+    - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
+      propertyPath: hero.curHP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: hero.curMP
       value: 50
@@ -3478,6 +3502,14 @@ PrefabInstance:
       propertyPath: Selector
       value: 
       objectReference: {fileID: 1023701528}
+    - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
+      propertyPath: enemy.curHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
+      propertyPath: enemy.baseHP
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3456306825298629423, guid: b5718b7798a8e4a4dbf4311fe3c45b50, type: 3}
       propertyPath: enemy.attacks.Array.size
       value: 2
@@ -3598,6 +3630,10 @@ PrefabInstance:
       propertyPath: HeroPanel
       value: 
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
+    - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
+      propertyPath: hero.curHP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
       propertyPath: hero.curMP
       value: 50

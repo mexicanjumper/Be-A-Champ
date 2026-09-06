@@ -143,13 +143,17 @@ public class BattelStateMacshine : MonoBehaviour
 
             case (PerformAction.LOSE):
                 {
-
+                    Debug.Log("You Loose");
                 }
                 break;
 
             case (PerformAction.WIN):
                 {
-
+                    Debug.Log("You Win");
+                    for(int i = 0; i < HerosInBattle.Count; i++)
+                    {
+                        HerosInBattle[i].GetComponent<HeroStateMaschine>().currentState = HeroStateMaschine.TurnState.WAITING;
+                    }
                 }
                 break;
         }
