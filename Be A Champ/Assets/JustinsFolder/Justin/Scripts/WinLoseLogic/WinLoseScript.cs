@@ -12,7 +12,16 @@ public class WinLoseScript : MonoBehaviour
     [SerializeField] private GameObject loseBattleText;
 
     [Header("Scene Name")]
-    [SerializeField] private string sceneName;
+    //first level getting introduced to world
+    [SerializeField] private string sceneZero;
+    //second level, first battle
+    [SerializeField] private string sceneOne;
+    //third level, onto next battle
+    [SerializeField] private string sceneTwo;
+    //fourth level, second and final battle
+    [SerializeField] private string sceneThree;
+    //fifth level, final scene with ending cutscene
+    [SerializeField] private string sceneFour;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,15 +49,45 @@ public class WinLoseScript : MonoBehaviour
         loseBattleText.SetActive(true);
     }
 
-    public void RestartBattle()
-    {
-        //reload the scene, can add scene name as a string, but I've made a string variable to edit in editor
-        SceneManager.LoadScene(sceneName); 
-    }
-
-    public void NextScene()
+    //these are to be put on main menu play button
+    public void NextSceneZero()
     {
         //this will allow you to load the next scene on the winning condition
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneZero);
+    }
+
+    //these are to be put on buttons
+    public void RestartBattleOne()
+    {
+        //reload the scene, can add scene name as a string, but I've made a string variable to edit in editor
+        SceneManager.LoadScene(sceneOne); 
+    }
+
+    //these are to be put on buttons
+    public void NextSceneTwo()
+    {
+        //this will allow you to load the next scene on the winning condition
+        SceneManager.LoadScene(sceneTwo);
+    }
+
+    //these are to be put on buttons
+    public void NextSceneThree()
+    {
+        //this will allow you to load the next scene on the winning condition
+        SceneManager.LoadScene(sceneThree);
+    }
+
+    //these are to be put on buttons
+    public void RestartBattleTwo()
+    {
+        //reload the scene, can add scene name as a string, but I've made a string variable to edit in editor
+        SceneManager.LoadScene(sceneThree);
+    }
+
+    //these are to be put on buttons
+    public void NextSceneFour()
+    {
+        //this will allow you to load the next scene on the winning condition
+        SceneManager.LoadScene(sceneFour);
     }
 }
