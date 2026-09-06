@@ -1062,7 +1062,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinLoseScript
   winBattleText: {fileID: 7127402737496255915}
   loseBattleText: {fileID: 4898371265059422284}
-  sceneName: JustinsScene
+  sceneZero: 
+  sceneOne: 
+  sceneTwo: 
+  sceneThree: 
+  sceneFour: 
 --- !u!1 &7646364342231490029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6503315847619553079}
         m_TargetAssemblyTypeName: WinLoseScript, Assembly-CSharp
-        m_MethodName: RestartBattle
+        m_MethodName: LoseBattle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1456,7 +1460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6503315847619553079}
         m_TargetAssemblyTypeName: WinLoseScript, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: WinBattle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

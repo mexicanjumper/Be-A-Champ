@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1693808659049596542}
   - component: {fileID: 3937205836325522834}
   - component: {fileID: 769517626717226281}
-  - component: {fileID: 8967926242732294374}
   m_Layer: 0
   m_Name: IMG_0035_0
   m_TagString: Untagged
@@ -116,20 +115,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8967926242732294374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422762862284843796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99558bd54c49d9d47b44be3b700ad28f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimChangeScript
-  generalAnimator: {fileID: 769517626717226281}
-  animationStateName: IsTakingDamage
 --- !u!1 &8141001794069975665
 GameObject:
   m_ObjectHideFlags: 0

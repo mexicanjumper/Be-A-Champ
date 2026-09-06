@@ -3294,10 +3294,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLoseBox
       objectReference: {fileID: 0}
-    - target: {fileID: 7206292578873135317, guid: 1ab5b07fb07d9c341b372f4a45fc30c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
