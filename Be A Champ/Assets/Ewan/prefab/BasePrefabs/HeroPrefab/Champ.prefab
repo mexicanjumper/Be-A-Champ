@@ -130,14 +130,26 @@ MonoBehaviour:
     theName: Champ
     baseHP: 200
     curHP: 200
+    baseMP: 0
+    curMP: 0
     baseATK: 50
     curATK: 50
     baseDEF: 10
     curDEF: 10
+    attacks:
+    - {fileID: 0}
+    stamina: 0
+    intellect: 0
+    agility: 0
+    dexterity: 0
+    MagicAttack:
+    - {fileID: 0}
+    - {fileID: 0}
   currentState: 0
-  ProgressBar: {fileID: 0}
+  ProgressBar: {fileID: 5789548722026440836, guid: 81a1927a0ef82b9418c76dbed9960390, type: 3}
   Selector: {fileID: 4328769463265620737}
   EnemyToAttack: {fileID: 0}
+  HeroPanel: {fileID: 0}
 --- !u!1001 &1555809750481727127
 PrefabInstance:
   m_ObjectHideFlags: 0

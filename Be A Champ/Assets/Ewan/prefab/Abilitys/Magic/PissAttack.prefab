@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PissAttack
   attackName: Piss Attack
   attackDescription: Shoots a stream of piss at the enemy.
-  attackDamage: 15
+  attackDamage: 40
   attackCost: 20

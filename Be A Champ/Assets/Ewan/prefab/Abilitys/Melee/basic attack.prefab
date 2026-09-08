@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7810123402063632688
+--- !u!1 &7510765339743497410
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2567288788711782079}
-  - component: {fileID: 7645609634760082270}
+  - component: {fileID: 3195936483907435617}
+  - component: {fileID: 6024369452003470080}
   m_Layer: 0
-  m_Name: BiteAbility
+  m_Name: basic attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2567288788711782079
+--- !u!4 &3195936483907435617
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7810123402063632688}
+  m_GameObject: {fileID: 7510765339743497410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.49812, y: 1.1, z: 8.49812}
+  m_LocalPosition: {x: 641.4107, y: 413.15814, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7645609634760082270
+--- !u!114 &6024369452003470080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7810123402063632688}
+  m_GameObject: {fileID: 7510765339743497410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fde468ad797dfe488bbcb0d4dabbe7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3508d9362f9dcf4498c5bdfd18f5d730, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AtteckOne
-  attackName: Bite
-  attackDescription: A powerful bite that deals moderate damage.
-  attackDamage: 20
+  m_EditorClassIdentifier: Assembly-CSharp::AtteckFive
+  attackName: Basic attack
+  attackDescription: A powerful Snapping attack that deals moderate damage.
+  attackDamage: 15
   attackCost: 0

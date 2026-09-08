@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireGun
   attackName: Fire Gun
   attackDescription: Shoots a gun at the enemy.
-  attackDamage: 30
+  attackDamage: 50
   attackCost: 5

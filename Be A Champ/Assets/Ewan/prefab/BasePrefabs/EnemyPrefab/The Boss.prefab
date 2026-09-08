@@ -127,12 +127,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateMaschine
   enemy:
     theName: The Boss
-    baseHP: 0
-    curHP: 0
+    baseHP: 350
+    curHP: 350
+    baseMP: 0
+    curMP: 0
     baseATK: 0
     curATK: 0
     baseDEF: 0
     curDEF: 0
+    attacks:
+    - {fileID: 815609896442180857, guid: 22d944c3c7e3c324c82e5fdb4d6cef92, type: 3}
+    - {fileID: 8384230315738310062, guid: 776b8a45b230a3c4c90c44edc5fca5a6, type: 3}
     Enemytype: 0
   currentState: 0
+  Selector: {fileID: 0}
   HeroToAttack: {fileID: 0}
