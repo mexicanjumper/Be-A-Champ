@@ -7,7 +7,7 @@ public class HeroStateMaschine : MonoBehaviour
 {
     private BattelStateMacshine BSM;
     public BaseHero hero;
-    
+
 
     public enum TurnState
     {
@@ -39,6 +39,8 @@ public class HeroStateMaschine : MonoBehaviour
     public GameObject HeroPanel;
     private Transform HeroPanelScpacer;
 
+    [SerializeField] private Animator ChampAnimator;
+
 
 
 
@@ -60,6 +62,7 @@ public class HeroStateMaschine : MonoBehaviour
    
     void Update()
     {
+        
         //Debug.Log(currentState);
         switch (currentState)
         {
@@ -107,7 +110,7 @@ public class HeroStateMaschine : MonoBehaviour
                         }
                       
                     }
-                    this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105, 105, 105, 255);
+                    this.gameObject.SetActive(false);
 
                     BSM.battleStates = BattelStateMacshine.PerformAction.CHEACKALIVE;
 
@@ -147,7 +150,28 @@ public class HeroStateMaschine : MonoBehaviour
         Vector3 enemyPosition = new Vector3(EnemyToAttack.transform.position.x+1.5f, EnemyToAttack.transform.position.y, EnemyToAttack.transform.position.z);
         while (MoveTowardsEnemy(enemyPosition))
         {
+            //do animations 
+            //Champ Animations
+            ChampAnimator.SetBool("IsChomping", true);
+            ChampAnimator.SetBool("IsShielding", true);
+            ChampAnimator.SetBool("IsMarking", true);
+
+            //GunCat Animations
+            ChampAnimator.SetBool("IsAttacking", true);
+            ChampAnimator.SetBool("IsDamage", true);
+            ChampAnimator.SetBool("IsDead", true);
+
+            //opspiejon Animations
+            ChampAnimator.SetBool("IsAttacking", true);
+            ChampAnimator.SetBool("IsDamage", true);
+            ChampAnimator.SetBool("IsTaunting", true);
+
+
+
+
             yield return null;
+
+
         }
 
 
@@ -159,6 +183,21 @@ public class HeroStateMaschine : MonoBehaviour
         Vector3 firstPosition = startposition;
         while (MoveTowardsStart(firstPosition))
         {
+            //do animations 
+            //Champ Animations
+            ChampAnimator.SetBool("IsChomping", false);
+            ChampAnimator.SetBool("IsShielding", false);
+            ChampAnimator.SetBool("IsMarking", false);
+
+            //GunCat Animations
+            ChampAnimator.SetBool("IsAttacking",false);
+            ChampAnimator.SetBool("IsDamage",false);
+            ChampAnimator.SetBool("IsDead", false);
+
+            //opspiejon Animations
+            ChampAnimator.SetBool("IsAttacking", false);
+            ChampAnimator.SetBool("IsDamage", false);
+            ChampAnimator.SetBool("IsTaunting", false);
             yield return null;
         }
 

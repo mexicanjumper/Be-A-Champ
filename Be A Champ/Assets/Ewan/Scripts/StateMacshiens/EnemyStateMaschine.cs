@@ -33,7 +33,7 @@ public class EnemyStateMaschine : MonoBehaviour
 
     //alive
     private bool alive = true;
-
+    [SerializeField] private Animator ChampAnimator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -87,7 +87,8 @@ public class EnemyStateMaschine : MonoBehaviour
                     }
 
                     // change colour or dead animation
-                    this.gameObject.GetComponent<MeshRenderer>().material.color = new Color32(105, 105, 105, 255);
+                   this.gameObject.SetActive(false);
+
 
                     alive = false;
 
@@ -144,6 +145,15 @@ public class EnemyStateMaschine : MonoBehaviour
         Vector3 heroPosition = new Vector3 (HeroToAttack.transform.position.x-1.5f, HeroToAttack.transform.position.y, HeroToAttack.transform.position.z);
         while (MoveTowardsEnemy(heroPosition))
         {
+            //do animations 
+            //zombie Animations
+            ChampAnimator.SetBool("IsTakingDamage", true);
+
+            //illumanati Animations
+            ChampAnimator.SetBool("IsTakingDamage", true);
+
+            //boss Animations
+            ChampAnimator.SetBool("IsTakingDamage", true);
             yield return null;
         }
 
@@ -158,6 +168,14 @@ public class EnemyStateMaschine : MonoBehaviour
         Vector3 firstPosition = startposition;
         while (MoveTowardsStart(firstPosition))
         {
+
+            ChampAnimator.SetBool("IsTakingDamage", false);
+
+            //illumanati Animations
+            ChampAnimator.SetBool("IsTakingDamage", false );
+
+            //boss Animations
+            ChampAnimator.SetBool("IsTakingDamage", false);
             yield return null;
         }
 
