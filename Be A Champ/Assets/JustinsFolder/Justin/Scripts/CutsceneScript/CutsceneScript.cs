@@ -6,7 +6,8 @@ public class CutsceneScript : MonoBehaviour
     public enum NextSceneName
     {
       Level1,
-      FirstBattle,
+      Level2,
+        FirstBattle,
       FinalBattle,
     }
 
