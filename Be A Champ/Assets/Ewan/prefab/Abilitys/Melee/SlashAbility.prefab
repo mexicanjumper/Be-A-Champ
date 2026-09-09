@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackTwo
   attackName: Slash
   attackDescription: A quick slash attack dealing moderate damage.
-  attackDamage: 40
+  attackDamage: 20
   attackCost: 0

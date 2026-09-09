@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Chomp
   attackName: Chomp
   attackDescription: A quick chomp attack dealing moderate damage.
-  attackDamage: 15
+  attackDamage: 25
   attackCost: 0
