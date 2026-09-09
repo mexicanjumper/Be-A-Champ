@@ -3,15 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    //add scene names here
+    public enum SceneNames
+    {
+        battleScene1,
+        IntroScene,
+        battleScene2
+
+    }
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
     public Animator dialogueAnimator;
 
     private Queue<string> sentences;
+
+    [SerializeField] private SceneNames sceneNames;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,6 +73,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialogueAnimator.SetBool("IsOpen", false);
+        SceneManager.LoadScene(sceneNames.ToString());
     }
 
 
