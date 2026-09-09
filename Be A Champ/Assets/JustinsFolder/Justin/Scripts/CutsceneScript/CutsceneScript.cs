@@ -11,8 +11,16 @@ public class CutsceneScript : MonoBehaviour
 
     [SerializeField] private NextSceneName nextScene;
 
+
+    [SerializeField] private string endCreditsSceneName;
+
     public void StartNextScene()
     {
         SceneManager.LoadScene(nextScene.ToString());
+    }
+
+    public void StartEndCredits()
+    {
+        SceneManager.LoadScene(endCreditsSceneName);   
     }
 }
