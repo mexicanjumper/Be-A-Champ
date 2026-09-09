@@ -683,7 +683,7 @@ MonoBehaviour:
   loseBattleText: {fileID: 1983341940}
   sceneZero: FirstBattle
   sceneOne: FirstBattle
-  sceneTwo: 
+  sceneTwo: SecondBattle
   sceneThree: 
   sceneFour: 
 --- !u!222 &296014630
@@ -1719,6 +1719,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.curHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.baseHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
       value: 
       objectReference: {fileID: 614411870}
@@ -2061,7 +2069,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 296014628}
         m_TargetAssemblyTypeName: WinLoseScript, Assembly-CSharp
-        m_MethodName: NextSceneZero
+        m_MethodName: NextSceneTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2603,6 +2611,14 @@ PrefabInstance:
     - target: {fileID: 2992000240368491926, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.curHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.baseHP
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
@@ -3753,6 +3769,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.curHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.baseHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
       value: 
       objectReference: {fileID: 1653911298}
@@ -4501,6 +4525,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036145318}
   m_CullTransparentMesh: 1
+--- !u!1 &2049389783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049389785}
+  - component: {fileID: 2049389784}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2049389784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049389783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d042d6d055ae41bd19ddd2583e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleCurserDiable
+--- !u!4 &2049389785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049389783}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.38476, y: -0, z: -48.12099}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2125064556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3763787792112297267, guid: fa995f232a7557a41a08f7c53731a254, type: 3}
@@ -5142,3 +5210,4 @@ SceneRoots:
   - {fileID: 1689838649}
   - {fileID: 1122693900}
   - {fileID: 796169532}
+  - {fileID: 2049389785}

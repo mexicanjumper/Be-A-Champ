@@ -5,8 +5,9 @@ public class CutsceneScript : MonoBehaviour
 {
     public enum NextSceneName
     {
-        JustinsScene,
-        IntroScene
+      Level1,
+      FirstBattle,
+      FinalBattle,
     }
 
     [SerializeField] private NextSceneName nextScene;

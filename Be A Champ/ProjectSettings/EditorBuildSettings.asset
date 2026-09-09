@@ -6,10 +6,34 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/DK/DK Scene.unity
+    guid: ab183a79c057a6343b011ce64f380c5c
+  - enabled: 1
+    path: Assets/Game Scenes/Level1.unity
+    guid: eba0d7bdb8f32f944a15a806fbadb908
+  - enabled: 1
+    path: Assets/Game Scenes/Level2.unity
+    guid: d427db11053e6a249aa439b62eca0b8e
+  - enabled: 1
+    path: Assets/Ewan/BattelScenes/SecondBattle.unity
+    guid: f7fa1eb47168b284dbe20a498695808c
+  - enabled: 1
     path: Assets/JustinsFolder/Justin/IntroScene.unity
     guid: f3c19e9215cc61749bdb4a7c5b089d28
   - enabled: 1
-    path: Assets/JustinsFolder/Justin/JustinsScene.unity
-    guid: 483a8ebf740026d4cb6db4c8648c24fe
+    path: Assets/JustinsFolder/Justin/MiddleScene.unity
+    guid: 67c33b902c92da145823c461190fac81
+  - enabled: 1
+    path: Assets/JustinsFolder/Justin/FINALScene.unity
+    guid: 9545e1790bf992841ab24a56b4d93bcd
+  - enabled: 1
+    path: Assets/Ewan/BattelScenes/FirstBattle.unity
+    guid: 88aadce15b525064e9d99f69b6ea88aa
+  - enabled: 1
+    path: Assets/Ewan/BattelScenes/FinalBattle.unity
+    guid: 738ad5568fbe3be4fb2d2d8bbaf47870
+  - enabled: 1
+    path: Assets/DK/Credits.unity
+    guid: 51dc80f8a73f5e740bd66712efa9eead
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

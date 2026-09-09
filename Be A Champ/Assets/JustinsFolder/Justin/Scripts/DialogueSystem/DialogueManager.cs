@@ -10,9 +10,9 @@ public class DialogueManager : MonoBehaviour
     //add scene names here
     public enum SceneNames
     {
-        battleScene1,
-        IntroScene,
-        battleScene2
+        FirstBattle,
+        SecondBattle,
+        FinalBattle,
 
     }
 

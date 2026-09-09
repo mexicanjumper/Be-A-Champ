@@ -676,8 +676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinLoseScript
   winBattleText: {fileID: 878351581}
   loseBattleText: {fileID: 1983341940}
-  sceneZero: EwanScene
-  sceneOne: EwanScene
+  sceneZero: FINALScene
+  sceneOne: FinalBattle
   sceneTwo: 
   sceneThree: 
   sceneFour: 
@@ -3844,6 +3844,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.curHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
+      propertyPath: enemy.baseHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
       value: 
       objectReference: {fileID: 1653911298}
@@ -4597,6 +4605,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036145318}
   m_CullTransparentMesh: 1
+--- !u!1 &2108191222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108191224}
+  - component: {fileID: 2108191223}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2108191223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108191222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d042d6d055ae41bd19ddd2583e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleCurserDiable
+--- !u!4 &2108191224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108191222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.38476, y: -0, z: -48.12099}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2125064556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3763787792112297267, guid: fa995f232a7557a41a08f7c53731a254, type: 3}
@@ -4730,7 +4782,7 @@ PrefabInstance:
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
     - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: hero.curHP
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: hero.curMP
@@ -4742,7 +4794,7 @@ PrefabInstance:
       objectReference: {fileID: 889333233}
     - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: hero.baseHP
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1972844177250049150, guid: 6332ec637768c5d4da80cccd3f6be4ec, type: 3}
       propertyPath: hero.baseMP
@@ -4912,7 +4964,7 @@ PrefabInstance:
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
     - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: hero.curHP
-      value: 120
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: hero.curMP
@@ -4924,7 +4976,7 @@ PrefabInstance:
       objectReference: {fileID: 1631911911}
     - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: hero.baseHP
-      value: 120
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2261204346804142542, guid: f174c7506ece26a419cf1da8dc422a79, type: 3}
       propertyPath: hero.baseMP
@@ -5138,7 +5190,7 @@ PrefabInstance:
       objectReference: {fileID: 4360384334380078779, guid: 1fa3410b2083f904c847922ba4213961, type: 3}
     - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
       propertyPath: hero.curHP
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
       propertyPath: hero.curMP
@@ -5148,6 +5200,10 @@ PrefabInstance:
       propertyPath: ProgressBar
       value: 
       objectReference: {fileID: 1272847875}
+    - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
+      propertyPath: hero.baseHP
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 7932444521665883570, guid: 860d83d98824703489ee68a0a113c2c5, type: 3}
       propertyPath: hero.baseMP
       value: 50
@@ -5238,3 +5294,4 @@ SceneRoots:
   - {fileID: 1689838649}
   - {fileID: 473771294}
   - {fileID: 1550602084}
+  - {fileID: 2108191224}

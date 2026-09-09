@@ -3,9 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public enum SceneNames
+    {
+       IntroScene
+    }
+
+    public SceneNames SceneName;
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneName.ToString());
     }
 
 

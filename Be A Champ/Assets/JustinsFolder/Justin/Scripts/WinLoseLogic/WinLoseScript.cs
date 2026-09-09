@@ -81,7 +81,7 @@ public class WinLoseScript : MonoBehaviour
     public void RestartBattleTwo()
     {
         //reload the scene, can add scene name as a string, but I've made a string variable to edit in editor
-        SceneManager.LoadScene(sceneThree);
+        SceneManager.LoadScene(sceneTwo);
     }
 
     //these are to be put on buttons
