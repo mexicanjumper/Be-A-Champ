@@ -681,8 +681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinLoseScript
   winBattleText: {fileID: 878351581}
   loseBattleText: {fileID: 1983341940}
-  sceneZero: FirstBattle
-  sceneOne: FirstBattle
+  sceneZero: EwanScene
+  sceneOne: EwanScene
   sceneTwo: 
   sceneThree: 
   sceneFour: 
@@ -1719,21 +1719,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.curHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.baseHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
       value: 
       objectReference: {fileID: 614411870}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.theName
-      value: Zombie 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: enemy.attacks.Array.size
       value: 1
@@ -2617,21 +2605,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.curHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.baseHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
       value: 
       objectReference: {fileID: 377898095}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.theName
-      value: Zombie 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: enemy.attacks.Array.size
       value: 1
@@ -3775,14 +3751,6 @@ PrefabInstance:
     - target: {fileID: 2992000240368491926, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.curHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
-      propertyPath: enemy.baseHP
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3299996308262423086, guid: 8f38b831bc2ba1d4fbc8ff3a2829ec39, type: 3}
       propertyPath: ChampAnimator
